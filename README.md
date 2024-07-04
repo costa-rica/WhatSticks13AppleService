@@ -1,4 +1,4 @@
-# What Sticks 13 Apple Service (WS11AS)
+# What Sticks 13 Apple Service (WS13AS)
 ![What Sticks Logo](https://what-sticks.com/website_images/wsLogo180.png)
 ## Overview
 
