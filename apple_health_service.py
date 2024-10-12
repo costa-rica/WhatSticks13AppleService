@@ -47,7 +47,12 @@ def what_sticks_health_service(user_id, time_stamp_str, add_qty_cat_bool, add_wo
     add_qty_cat_bool = add_qty_cat_bool == 'True'
     add_workouts_bool = add_workouts_bool == 'True'
     
+
     # filename json file that has new data
+    # if time_stamp_str == "just_recalculate":
+    #     apple_health_qty_cat_json_file_name = "no file expected"
+    #     apple_health_workouts_json_file_name = "no file expected"
+    # else:
     apple_health_qty_cat_json_file_name = apple_health_qty_cat_json_filename(user_id, time_stamp_str)
     apple_health_workouts_json_file_name = apple_health_workouts_json_filename(user_id, time_stamp_str)
 

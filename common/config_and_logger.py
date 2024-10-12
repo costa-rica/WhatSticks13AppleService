@@ -16,7 +16,7 @@ match os.environ.get('WS_CONFIG_TYPE'):
 
 # Setting up Logger
 app_name = "WS11AppleService"
-formatter = logging.Formatter(f'%(asctime)s - {app_name} - %(name)s - [%(filename)s:%(lineno)d] - %(message)s')
+formatter = logging.Formatter(f'%(asctime)s - {app_name} - [%(filename)s:%(lineno)d] - %(message)s')
 
 # Initialize a logger
 logger_apple = logging.getLogger(__name__)
