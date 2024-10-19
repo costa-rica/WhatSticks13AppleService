@@ -39,6 +39,10 @@ def add_apple_workouts_to_database(user_id,apple_workouts_filename,df_existing_u
         # apple_json_data = json.load(new_user_data_path_and_filename)
         df_new_user_workout_data = pd.read_json(new_user_data_path_and_filename)
 
+    if len(df_new_user_workout_data) == 0:
+        count_of_records_added_to_db = 0
+        return count_of_records_added_to_db
+
     # Convert the 'value' column in both dataframes to string
     df_new_user_workout_data['sourceVersion'] = df_new_user_workout_data['sourceVersion'].astype(str)
     df_new_user_workout_data['duration'] = df_new_user_workout_data['duration'].astype(str)
