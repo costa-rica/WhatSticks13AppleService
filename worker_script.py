@@ -30,11 +30,9 @@ def process_job():
             job_info_for_queue_dict = {'user_id':user_id,'time_stamp_str':time_stamp_str}
             save_job_to_queue_json(job_info_for_queue_dict)
             try:
-                # raise Exception('I know Python!')
-                raise ValueError('A very specific bad thing happened.')
                 run_what_sticks_health_service(user_id, time_stamp_str, add_qty_cat_bool, add_workouts_bool)
             except Exception as e:
-                logger_apple.info(f"- its ok we caught the error: {e} -")
+                logger_apple.info(f"- error caught in process_job()--> {type(e).__name__}: {str(e)} -")
                 job_info_for_queue_dict = {**job_info_for_queue_dict, "error":f"{type(e).__name__}: {str(e)}"}
 
             logger_apple.info(f"-  dict to place inside compelted_jobs.json: {job_info_for_queue_dict} -")
